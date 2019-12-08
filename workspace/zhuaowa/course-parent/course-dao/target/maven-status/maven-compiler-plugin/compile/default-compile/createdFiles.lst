@@ -1,0 +1,4 @@
+com\xiaoming\course\dao\MyBatisPlusGenerator.class
+com\xiaoming\course\dao\entity\User.class
+com\xiaoming\course\dao\config\MybatisPlusConfig.class
+com\xiaoming\course\dao\dao\UserMapper.class
