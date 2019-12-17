@@ -1,8 +1,6 @@
 package com.xiaoming.course.biz.service;
 
-import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.xiaoming.course.dao.dao.RoleMapper;
 import com.xiaoming.course.dao.dao.UserMapper;
 import com.xiaoming.course.dao.entity.User;
@@ -10,7 +8,6 @@ import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.util.CollectionUtils;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import javax.annotation.Resource;
@@ -27,7 +24,7 @@ public class WrapperTest {
     private RoleMapper roleMapper;
 
     @Test
-    public void tests() {
+   /* public void tests() {
         System.out.println("----- 普通查询 ------");
         List<User> plainUsers = userMapper.selectList(new QueryWrapper<User>().eq("role_id", 2L));
         List<User> lambdaUsers = userMapper.selectList(new QueryWrapper<User>().lambda().eq(User::getRoleId, 2L));
@@ -104,7 +101,7 @@ public class WrapperTest {
         userMapper.update(new User(), uw);
         User u4 = userMapper.selectById(4);
         Assert.assertNull(u4.getEmail());
-    }
+    }*/
 
     private <T> void print(List<T> list) {
         if (!CollectionUtils.isEmpty(list)) {

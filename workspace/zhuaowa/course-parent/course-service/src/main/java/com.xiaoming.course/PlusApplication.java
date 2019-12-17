@@ -30,8 +30,8 @@ public class PlusApplication {
     /**
      * 将 CommandLineRunner 定义成bean加载到 spring 中
      * CommandLineRunner 作用：项目启动后立马执行，执行后停止项目 crontab
+     * 比如做定时任务：
      *
-     * Wrappers
      * @param context
      * @return
      */
